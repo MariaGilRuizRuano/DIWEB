@@ -3,23 +3,33 @@ body{
     text-align: left;
 }
 
-.h1{
+h1{
     color: black;
+    font-size: 55px;
+}
+
+p{
+    font-size: 25px;
 }
 
 .blanco{
     color: white;
+    font-family: serif;
+    font-style: oblique;
 
 }
 
 .amarillo{
     color: lightgoldenrodyellow;
+    font-family: sans-serif;
 }
 
 .naranja{
     color: orange;
+    font-family: monospace;
 }
 
 .rojo{
     color: red;
+    font-family: cursive;
 }
