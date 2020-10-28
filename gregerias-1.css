@@ -1,0 +1,25 @@
+body{
+    background-color:darkolivegreen;
+    text-align: left;
+}
+
+.h1{
+    color: black;
+}
+
+.blanco{
+    color: white;
+
+}
+
+.amarillo{
+    color: lightgoldenrodyellow;
+}
+
+.naranja{
+    color: orange;
+}
+
+.rojo{
+    color: red;
+}
