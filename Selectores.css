@@ -1,0 +1,55 @@
+body{
+    background-color: lightslategrey;
+    font-family: Arial;
+}
+
+h1{
+    text-align: center;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    float: left;
+    height: 120px ;
+    width: 180px;
+    margin:6%;
+    margin-bottom: 99px;
+    margin-top: 25px;
+    }
+
+    a[rel ='alternate'] :after{
+        content: "Brexit"
+    }
+
+    a[rel='next'] :before{
+        content:url("");
+    }
+
+    a[rel='tag'] :before{
+        content:url("");
+    }
+
+    a[rel='bookmark'] :before{
+        content:url("");
+    }
+
+    a[rel='ayuda.pdf'] :before{
+        content:url("");
+    }
+
+    a[rel='help'] :before{
+        content:url("");
+    }
+
+    a[rel='search'] :before{
+        content:url("");
+    }
+
+    a[rel='nofllow'] :before{
+        content:url("");
+    }
