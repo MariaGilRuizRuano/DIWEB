@@ -1,0 +1,57 @@
+services:
+    aimeos:
+        class: Aimeos\ShopBundle\Service\Aimeos
+        arguments: ["@service_container"]
+        public: true
+    aimeos.config:
+        class: Aimeos\ShopBundle\Service\Config
+        arguments: ["@service_container"]
+        public: true
+    aimeos.context:
+        class: Aimeos\ShopBundle\Service\Context
+        arguments: ["@service_container"]
+        public: true
+    aimeos.i18n:
+        class: Aimeos\ShopBundle\Service\I18n
+        arguments: ["@service_container"]
+        public: true
+    aimeos.locale:
+        class: Aimeos\ShopBundle\Service\Locale
+        arguments: ["@request_stack","@service_container"]
+        public: true
+    aimeos.support:
+        class: Aimeos\ShopBundle\Service\Support
+        arguments: []
+        public: true
+    aimeos.view:
+        class: Aimeos\ShopBundle\Service\View
+        arguments: ["@request_stack","@service_container"]
+        public: true
+    shop:
+        class: Aimeos\ShopBundle\Service\Shop
+        arguments: ["@service_container"]
+        public: true
+
+    aimeos_account:
+        class: Aimeos\ShopBundle\Command\AccountCommand
+        tags:
+            - { name: 'console.command', command: 'aimeos:account' }
+    aimeos_cache:
+        class: Aimeos\ShopBundle\Command\CacheCommand
+        tags:
+            - { name: 'console.command', command: 'aimeos:cache' }
+    aimeos_jobs:
+        class: Aimeos\ShopBundle\Command\JobsCommand
+        tags:
+            - { name: 'console.command', command: 'aimeos:jobs' }
+    aimeos_setup:
+        class: Aimeos\ShopBundle\Command\SetupCommand
+        tags:
+            - { name: 'console.command', command: 'aimeos:setup' }
+
+    aimeos.csrf_listener:
+        class: Aimeos\ShopBundle\EventListener\CsrfListener
+        arguments:
+            - "@service_container"
+        tags:
+            - { name: kernel.event_listener, event: kernel.request }

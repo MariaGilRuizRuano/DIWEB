@@ -1,0 +1,200 @@
+#apc_enable: false,
+apc_prefix: 'sf:'
+extdir: "%kernel.root_dir%/../ext"
+uploaddir: /
+
+page:
+    account-index: ['account/profile','account/review','account/subscription','account/history','account/favorite','account/watch','basket/mini','catalog/session']
+    basket-index: ['basket/bulk', 'basket/standard','basket/related']
+    catalog-count: ['catalog/count']
+    catalog-detail: ['basket/mini','catalog/stage','catalog/detail','catalog/session']
+    catalog-home: ['basket/mini','catalog/home']
+    catalog-list: ['basket/mini','catalog/filter','catalog/lists']
+    catalog-stock: ['catalog/stock']
+    catalog-suggest: ['catalog/suggest']
+    catalog-tree: ['basket/mini','catalog/filter','catalog/stage','catalog/lists']
+    supplier-detail: ['basket/mini','supplier/detail','catalog/lists']
+    checkout-confirm: ['checkout/confirm']
+    checkout-index: ['checkout/standard']
+    checkout-update: ['checkout/update']
+
+resource:
+    db:
+        adapter: mysql
+        host: "%database_host%"
+        port: "%database_port%"
+        database: "%database_name%"
+        username: "%database_user%"
+        password: "%database_password%"
+        stmt: ["SET SESSION sort_buffer_size=2097144; SET NAMES 'utf8mb4'; SET SESSION sql_mode='ANSI'; SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED"]
+        limit: 3
+        opt-persistent: 0
+        defaultTableOptions:
+            charset: utf8mb4
+            collate: utf8mb4_unicode_ci
+    fs:
+        adapter: Standard
+        basedir: "%kernel.root_dir%/../web"
+        tempdir: "%kernel.cache_dir%"
+        baseurl: "/"
+    fs-admin:
+        adapter: Standard
+        basedir: "%kernel.cache_dir%/../admin"
+        tempdir: "%kernel.cache_dir%"
+    fs-import:
+        adapter: Standard
+        basedir: "%kernel.cache_dir%/../import"
+        tempdir: "%kernel.cache_dir%"
+    fs-secure:
+        adapter: Standard
+        basedir: "%kernel.cache_dir%/../secure"
+        tempdir: "%kernel.cache_dir%"
+    mq:
+        adapter: Standard
+        db: db
+
+admin:
+    jqadm:
+        url:
+            copy:
+                target: aimeos_shop_jqadm_copy
+            create:
+                target: aimeos_shop_jqadm_create
+            delete:
+                target: aimeos_shop_jqadm_delete
+            export:
+                target: aimeos_shop_jqadm_export
+            get:
+                target: aimeos_shop_jqadm_get
+            save:
+                target: aimeos_shop_jqadm_save
+            search:
+                target: aimeos_shop_jqadm_search
+    jsonadm:
+        url:
+            target: aimeos_shop_jsonadm_get
+            config:
+                absoluteUri: true
+            options:
+                target: aimeos_shop_jsonadm_options
+                config:
+                    absoluteUri: true
+
+client:
+    html:
+        account:
+            index:
+                url:
+                    target: aimeos_shop_account
+            profile:
+                url:
+                    target: aimeos_shop_account
+            subscription:
+                url:
+                    target: aimeos_shop_account
+            history:
+                url:
+                    target: aimeos_shop_account
+            favorite:
+                url:
+                    target: aimeos_shop_account_favorite
+            watch:
+                url:
+                    target: aimeos_shop_account_watch
+            download:
+                url:
+                    target: aimeos_shop_account_download
+                error:
+                    url:
+                        target: aimeos_shop_account
+        catalog:
+            count:
+                url:
+                    target: aimeos_shop_count
+            detail:
+                url:
+                    target: aimeos_shop_detail
+            lists:
+                url:
+                    target: aimeos_shop_list
+            session:
+                pinned:
+                    url:
+                        target: aimeos_shop_session_pinned
+            stock:
+                url:
+                    target: aimeos_shop_stock
+            suggest:
+                url:
+                    target: aimeos_shop_suggest
+            tree:
+                url:
+                    target: aimeos_shop_tree
+        common:
+            content:
+                baseurl: /
+            template:
+                baseurl: bundles/aimeosshop/elegance
+        basket:
+            standard:
+                url:
+                    target: aimeos_shop_basket
+        checkout:
+            confirm:
+                url:
+                    target: aimeos_shop_confirm
+            standard:
+                url:
+                    target: aimeos_shop_checkout
+                summary:
+                    option:
+                        terms:
+                            url:
+                                target: aimeos_shop_terms
+                            cancel:
+                                url:
+                                    target: aimeos_shop_terms
+                            privacy:
+                                url:
+                                    target: aimeos_shop_privacy
+            update:
+                url:
+                    target: aimeos_shop_update
+        supplier:
+            detail:
+                url:
+                    target: aimeos_shop_supplier_detail
+    jsonapi:
+        url:
+            target: aimeos_shop_jsonapi_options
+
+controller:
+    common:
+        media:
+            standard:
+                # Mime icon related settings
+                mimeicon:
+                    # Directory where icons for the mime types stored. Must be relative to the path in "basedir"
+                    directory: bundles/aimeosshop/mimeicons
+                    # File extension of mime type icons
+                    extension: .png
+
+i18n:
+
+madmin:
+
+mshop:
+    customer:
+        manager:
+            name: FosUser
+            password:
+                name: Bcrypt
+    index:
+        manager:
+            name: MySQL
+
+command:
+
+backend:
+
+frontend:
