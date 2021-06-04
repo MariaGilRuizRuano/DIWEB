@@ -212,7 +212,7 @@ iframe {
 }
 
 
-/* footer 
+/* footer
 ----------------------------------------------------------------------------- */
 
 section#footer-bar,
@@ -382,14 +382,6 @@ section.navbar {
     font-weight: bold;
     text-align: center;
     padding: 10px 14px;
-}
-
-#menu>ul>li.active {
-    background-color: #eb4800;
-}
-
-#menu>ul>li.active>a {
-    color: #fff;
 }
 
 #menu>ul a:hover {
@@ -790,7 +782,7 @@ section.our_client .row {
 /* end Product Detail */
 
 
-/* Block 
+/* Block
 ----------------------------------------------------------------------------- */
 
 .block {

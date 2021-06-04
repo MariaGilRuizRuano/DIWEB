@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+body {
+    font-family: 'Roboto Condensed';
+}
+
+p {
+    font-size: 20px;
+}
+
 .iconos img {
     width: 30px;
     height: 25px;
@@ -132,4 +141,205 @@ a.iconos {
 body {
     background: linear-gradient(to bottom, rgba(151, 150, 150, 0.816), #e4e2df);
     background-repeat: repeat-y;
+}
+
+.register-btn {
+    width: 230px;
+    height: 50px;
+    border-radius: 2px;
+    margin: 5px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .25);
+}
+
+#google-btn {
+    background-color: #4285f4;
+}
+
+#facebook-btn {
+    background-color: darkblue;
+}
+
+#pinterest-btn {
+    background-color: rgb(240, 49, 49);
+}
+
+.register-icon-wrapper {
+    position: absolute;
+    margin: 1px;
+    width: 48px;
+    height: 48px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.register-icon {
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 11px;
+    width: 25px;
+    height: 25px;
+}
+
+.btn-text {
+    float: right;
+    margin: 11px 11px 0 0;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    width: 70%;
+}
+
+.register-drch {
+    float: right;
+    margin-right: 7px;
+    margin-top: 30px;
+    font-weight: bolder;
+}
+
+.register-izq {
+    float: left;
+    width: 45%;
+}
+
+.or {
+    width: 30px;
+    height: 30px;
+    margin: 30px;
+    margin-top: 55px;
+    float: left;
+    font-size: 20px;
+}
+
+div.mapa {
+    width: 70%;
+    height: 500px;
+    float: left;
+}
+
+.mapa p {
+    font-size: 14px;
+}
+
+.video-responsive p {
+    font-weight: 300;
+    font-weight: 900;
+    color: rgb(66, 62, 62);
+}
+
+iframe.mapa {
+    width: 90%;
+    height: 390px;
+    margin: 5px;
+}
+
+#row {
+    float: right;
+    width: 30%;
+    border-left: 2px gray solid;
+    margin-top: 10px;
+}
+
+#enviar-email {
+    margin: 10px;
+    width: 30%;
+}
+
+.navbar-inner.main-menu {
+    border-top: 3px solid #f0c88d;
+    border-bottom: 3px solid #f0c88d;
+}
+
+#menu ul li:hover {
+    background-color: #f0c88d;
+    color: rgb(53, 48, 48);
+}
+
+#menu ul li.active {
+    background-color: #f0c88d;
+}
+
+#menu ul li.active a {
+    color: black;
+}
+
+#menu ul ul a:hover,
+#menu ul li:hover a {
+    color: black;
+    background-color: #f0c88d
+}
+
+#menu ul ul a:hover {
+    background-color: #f0c88d;
+}
+
+.product-box:hover {
+    background-color: #c0bbb8;
+}
+
+.product-box {
+    border: 2px solid #f0c88d;
+}
+
+@media screen and (max-width: 767px) {
+    .register-drch {
+        float: left;
+    }
+    .product-box {
+        width: 100%;
+        height: 750px;
+    }
+    .product-box img {
+        height: 650px;
+    }
+    body {
+        font-size: 18px;
+    }
+    .register-drch {
+        float: right;
+        margin-right: 0px;
+        margin-top: 25px;
+    }
+    .or {
+        color: white;
+        width: 0px;
+        height: 0px;
+    }
+    div .mapa {
+        width: 260px;
+    }
+    .”video-responsive” {
+        margin-top: 20px;
+        float: left;
+    }
+    div#row.row {
+        width: 250px;
+    }
+    #enviar-email {
+        margin: 5px;
+        width: 250px
+    }
+}
+
+._toggleMenu {
+    margin: 0 -10px;
+    display: none;
+    background: #f0c88d;
+}
+
+._toggleMenu a:hover {
+    color: rgb(12, 12, 12);
+    background-color: #a8a094 !important;
+}
+
+h4.title strong {
+    color: #f0c88d;
+}
+
+.span9 {
+    width: 95%;
+}
+
+.span9 img {
+    max-width: 500px;
 }
